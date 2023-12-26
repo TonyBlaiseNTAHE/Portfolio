@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @media screen and (max-width: 1400px) {
     #profile {
       height: 83vh;
@@ -101,3 +102,13 @@
       text-align: justify;
     }
   }
+=======
+@media  screen and (max-width: 1200px) {
+    #desktop-nav{
+        display: none;
+    }
+    #hamburger-nav {
+        display: flex;
+    }
+}
+>>>>>>> 011b3fa46ea430f069f9e1acd1e065865ec9f4dc
