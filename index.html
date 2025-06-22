@@ -1,60 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Tony B NTAHE | Full-stack Developer</title>
+    <meta name="description" content="Personal portfolio of Tony B NTAHE, a Full-stack Developer">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mediaqueries.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Tony B NTAHE</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Tony B NTAHE</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#project" onclick="toggleMenu()">Project</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="/assets/DSC_7370 (6).png" alt="Tony blaise profile picture">
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Tony B NTAHE</h1>
-            <p class="btn__text__p2">Full-stack Developer</p>
-            <div class="btn__container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/Tony Blaise CVfinal.pdf')">
-                    Download cv
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Info
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container container">
+            <a href="#" class="logo">Tony<span>NTAHE</span></a>
+            
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#project" class="nav-link">Project</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
                 </button>
             </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="my linkedin profile" class="icon" onclick="location.href='https://www.linkedin.com/in/ntahe-tony-blaise-4a7619244/'"/>
-                <img src="./assets/github.png" alt="my github profile" class="icon" onclick="location.href='https://github.com/TonyBlaiseNTAHE'"/>
+
+            <div class="hamburger-menu">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li style="--i: 1"><a href="#about" class="nav-link">About</a></li>
+                    <li style="--i: 2"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li style="--i: 3"><a href="#project" class="nav-link">Project</a></li>
+                    <li style="--i: 4"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li style="--i: 5">
+                        <button class="theme-toggle mobile-theme-toggle" id="mobile-theme-toggle" aria-label="Toggle theme">
+                            <i class="fas fa-moon"></i> Toggle Theme
+                        </button>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="overlay"></div>
+
+    <!-- Hero Section -->
+    <section id="profile" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="section__text__p1">Hello, I'm</p>
+                    <h1 class="hero-title">Tony B NTAHE</h1>
+                    <p class="hero-subtitle">Full-stack Developer</p>
+                    <p class="hero-description">I build exceptional digital experiences with modern web technologies.</p>
+                    <div class="btn__container">
+                        <a href="./assets/Tony Blaise CVfinal.pdf" class="btn btn-primary" download>
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
+                    <div class="socials-container">
+                        <a href="https://www.linkedin.com/in/ntahe-tony-blaise-4a7619244/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/TonyBlaiseNTAHE" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:your.email@example.com" class="social-icon" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-image-container">
+                        <img src="./assets/profile-pic.jpg" alt="Tony B NTAHE" class="profile-image">
+                        <div class="floating-elements">
+                            <span class="floating-element element-1">
+                                <i class="fab fa-html5"></i>
+                            </span>
+                            <span class="floating-element element-2">
+                                <i class="fab fa-css3-alt"></i>
+                            </span>
+                            <span class="floating-element element-3">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            <span class="floating-element element-4">
+                                <i class="fab fa-react"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </section>
